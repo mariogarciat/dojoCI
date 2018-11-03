@@ -1,6 +1,8 @@
-var codeBreaker = require('../../CodeBreaker.js')
+var CodeBreaker = require('../../CodeBreaker')
 
+var codeBreaker = new CodeBreaker()
 exports.createSecret = function(req, res) {  
+  
   codeBreaker.createSecret(req.body.secret);
   res.send('Created secret.');
 };
